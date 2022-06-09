@@ -1,9 +1,7 @@
 package com.company.musicstorecatalog.controller;
 
 import com.company.musicstorecatalog.exception.BadIdException;
-import com.company.musicstorecatalog.model.Album;
 import com.company.musicstorecatalog.model.Artist;
-import com.company.musicstorecatalog.repository.AlbumRepository;
 import com.company.musicstorecatalog.repository.ArtistRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

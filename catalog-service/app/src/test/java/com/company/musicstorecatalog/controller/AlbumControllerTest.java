@@ -13,14 +13,13 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.ResultActions;
+
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.doThrow;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -79,7 +78,7 @@ public class AlbumControllerTest {
     public void shouldReturnAlbumById() throws Exception {
         doReturn(Optional.of(smithAlbum)).when(repo).findById(9999);
 
-        ResultActions result = mockMvc.perform(
+         mockMvc.perform(
                         get("/album/9999"))
                 .andExpect(status().isOk())
                 .andExpect((content().json(smithJson))

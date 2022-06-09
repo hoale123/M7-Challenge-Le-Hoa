@@ -1,4 +1,4 @@
-package com.company.musicstorecatalog.model;
+package com.company.musicstorerecommendations.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 

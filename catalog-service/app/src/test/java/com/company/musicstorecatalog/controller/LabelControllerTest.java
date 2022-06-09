@@ -2,8 +2,6 @@ package com.company.musicstorecatalog.controller;
 
 import com.company.musicstorecatalog.exception.BadIdException;
 import com.company.musicstorecatalog.model.Label;
-import com.company.musicstorecatalog.model.Label;
-import com.company.musicstorecatalog.repository.LabelRepository;
 import com.company.musicstorecatalog.repository.LabelRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Before;
@@ -15,13 +13,12 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.ResultActions;
+
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.doThrow;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -79,7 +76,7 @@ public class LabelControllerTest {
     public void shouldReturnLabelById() throws Exception {
         doReturn(Optional.of(smithLabel)).when(repo).findById(9999);
 
-        ResultActions result = mockMvc.perform(
+         mockMvc.perform(
                         get("/label/9999"))
                 .andExpect(status().isOk())
                 .andExpect((content().json(smithJson))

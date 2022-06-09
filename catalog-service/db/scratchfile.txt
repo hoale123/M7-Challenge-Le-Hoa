@@ -1,5 +1,3 @@
-C:\Users\coolk\JAVA-BOOTCAMP\Week-7-project-2\pet-inventory-db\data
-
 
 docker container run -d -p 3306:3306 \
 --env MYSQL_ROOT_PASSWORD=password \

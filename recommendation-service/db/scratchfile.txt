@@ -1,0 +1,9 @@
+C:\Users\coolk\JAVA-BOOTCAMP\M7-Challenge-Le-Hoa\recommendation-service\db\data
+C:\Users\coolk\JAVA-BOOTCAMP\M7-Challenge-Le-Hoa\recommendation-service\db\data
+
+
+docker container run -d -p 3306:3306 \
+--env MYSQL_ROOT_PASSWORD=password \
+--volume="C:/Users/coolk/JAVA-BOOTCAMP/M7-Challenge-Le-Hoa/recommendation-service/db/data":/var/lib/mysql \
+--network=catalognetwork --name=mysql-db recommendation-db
+      //container              //image
